@@ -1,66 +1,47 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
-  <title>Player Portal + Chat</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: #000;
-    }
-    .container {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-    }
-    iframe {
-      border: none;
-      display: block;
-    }
-    iframe.portal {
-      width: 35vw;
-      height: 100vh;
-    }
-    iframe.chat {
-      width: 65vw;
-      height: 100vh;
-      overflow: hidden;
-    }
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-      iframe.portal {
-        width: 100vw;
-        height: 35vh;
-      }
-      iframe.chat {
-        width: 100vw;
-        height: 65vh;
-      }
-    }
-    @media (max-width: 400px) {
-      iframe.chat {
-        transform: scale(0.9);
-        transform-origin: top left;
-        height: calc(65vh * 1.1);
-      }
-    }
-  </style>
+<title>Player Portal + Chat</title>
+<style>
+html, body {
+margin: 0;
+padding: 0;
+height: 100vh;
+background: #000;
+}
+.container {
+display: flex;
+height: 100vh;
+width: 100vw;
+}
+iframe {
+border: none;
+height: 100vh;
+width: 50vw;
+}
+/* Optional: Make chat a little narrower */
+/*
+iframe.chat {
+width: 35vw;
+}
+iframe.portal {
+width: 65vw;
+}
+*/
+</style>
 </head>
 <body>
-  <div class="container">
-    <iframe
-      src="https://frbcapl.github.io/player-search/"
-      title="Player Search Portal"
-      class="portal"
-    ></iframe>
-    <iframe
-      src="https://frbcapl.github.io/stream-chat-frontend/"
-      title="Chat"
-      class="chat"
-    ></iframe>
-  </div>
+<div class="container">
+<iframe
+src="https://frbcapl.github.io/player-search/"
+title="Player Search Portal"
+class="portal"
+></iframe>
+<iframe
+src="https://frbcapl.github.io/stream-chat-frontend/"
+title="Chat"
+class="chat"
+></iframe>
+</div>
 </body>
 </html>
