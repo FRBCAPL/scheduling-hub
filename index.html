@@ -17,22 +17,27 @@
     iframe {
       border: none;
       height: 100vh;
+      display: block;
     }
-    /* Chat bigger */
+    /* Desktop: chat is bigger */
     iframe.portal {
       width: 35vw;
     }
     iframe.chat {
       width: 65vw;
     }
-    /* Responsive: stack on small screens */
+    /* Responsive: stack vertically, chat is taller */
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
       }
-      iframe.portal, iframe.chat {
+      iframe.portal {
         width: 100vw;
-        height: 50vh;
+        height: 35vh;
+      }
+      iframe.chat {
+        width: 100vw;
+        height: 65vh;
       }
     }
   </style>
