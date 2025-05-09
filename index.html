@@ -16,17 +16,17 @@
     }
     iframe {
       border: none;
-      height: 100vh;
       display: block;
     }
-    /* Desktop: chat is bigger */
     iframe.portal {
       width: 35vw;
+      height: 100vh;
     }
     iframe.chat {
       width: 65vw;
+      height: 100vh;
+      overflow: hidden;
     }
-    /* Responsive: stack vertically, chat is taller */
     @media (max-width: 900px) {
       .container {
         flex-direction: column;
@@ -38,6 +38,13 @@
       iframe.chat {
         width: 100vw;
         height: 65vh;
+      }
+    }
+    @media (max-width: 400px) {
+      iframe.chat {
+        transform: scale(0.9);
+        transform-origin: top left;
+        height: calc(65vh * 1.1);
       }
     }
   </style>
