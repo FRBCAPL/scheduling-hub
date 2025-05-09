@@ -17,17 +17,24 @@
     iframe {
       border: none;
       height: 100vh;
-      width: 50vw;
     }
-    /* Optional: Make chat a little narrower */
-    /* 
-    iframe.chat {
-      width: 35vw;
-    }
+    /* Make chat a little narrower and portal wider */
     iframe.portal {
       width: 65vw;
     }
-    */
+    iframe.chat {
+      width: 35vw;
+    }
+    /* Responsive: stack on small screens */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      iframe.portal, iframe.chat {
+        width: 100vw;
+        height: 50vh;
+      }
+    }
   </style>
 </head>
 <body>
